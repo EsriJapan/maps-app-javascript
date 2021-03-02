@@ -2,7 +2,7 @@
   "name": "maps-app-javascript",
   "version": "1.0.2",
   "devDependencies": {
-    "@types/arcgis-js-api": "~4.11.0",
+    "@types/arcgis-js-api": "^4.11.0",
     "@types/sinon": "^7.0.11",
     "appcache-webpack-plugin": "^1.4.0",
     "clean-webpack-plugin": "^2.0.1",
@@ -15,13 +15,13 @@
     "intern": "^4.4.2",
     "lint-staged": "^8.1.5",
     "mini-css-extract-plugin": "^0.6.0",
-    "node-sass": "4.11.0",
+    "node-sass": "^4.14.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prettier": "^1.17.0",
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^7.1.0",
     "sinon": "^7.3.2",
-    "style-loader": "0.23.1",
+    "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.2",
     "ts-loader": "^5.3.3",
     "tslint": "^5.16.0",
@@ -53,7 +53,7 @@
     ]
   },
   "dependencies": {
-    "@arcgis/webpack-plugin": "^4.11.0",
+    "@arcgis/webpack-plugin": "4.11.0",
     "calcite-web": "github:Esri/calcite-web#v1.2.5",
     "tslib": "^1.9.2"
   },

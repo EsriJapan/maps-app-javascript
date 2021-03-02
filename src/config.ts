@@ -16,7 +16,7 @@
  * This is needed to be able to use premium
  * services such as routing and directions.
  */
-export const appId = "<APP-ID>";
+export const appId = "c3XM5UoMrQnPAc2L";
 
 /**
  * Users Portal URL.
