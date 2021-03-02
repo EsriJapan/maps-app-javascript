@@ -60,7 +60,7 @@ ServiceWorker が `webpack-dev-server` の自己署名証明書で正しく動�
 * ArcGIS Platform からプレミアムな[ルート案内やルート検索](https://developers.arcgis.com/features/directions/)、[ジオコーディング](https://developers.arcgis.com/features/geocoding/)を利用するために、クライアントIDとともにアプリを登録する必要があります。
 
 ![](images/Register1.png)
-* maps-app のバージョンを登録したら、登録情報からクライアントIDのコピーを取得し、`src/app/config.ts` というファイルの `appId` という定数にコピーしたクライアントIDを設定します。 `portalUrl` という定数には、 `"https://<MY-ORGANIZATION>.maps.arcgis.com"` といった、組織のポータル URL を指定する必要があります。 また、独自のWebMapを提供することや、提供されているデフォルトのWebMapを使用することもできます。
+* Maps App のバージョンを登録したら、登録情報からクライアントIDのコピーを取得し、`src/app/config.ts` というファイルの `appId` という定数にコピーしたクライアントIDを設定します。 `portalUrl` という定数には、 `"https://<MY-ORGANIZATION>.maps.arcgis.com"` といった、組織のポータル URL を指定する必要があります。 また、独自のWebMapを提供することや、提供されているデフォルトのWebMapを使用することもできます。
 
 ```js
 // src/app/config.ts
