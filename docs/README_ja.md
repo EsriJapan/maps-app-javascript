@@ -67,7 +67,7 @@ const basemapGallery = new BasemapGallery({
 });
 ```
 
-## ID
+## Identity
 
 Maps App は ArcGIS [Identity](https://developers.arcgis.com/authentication/)  モデルを利用して、[指定されたユーザー](https://developers.arcgis.com/authentication/#named-user-login)のログインパターンを介して、リソースへのアクセスを提供します。
 
