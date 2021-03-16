@@ -109,7 +109,7 @@ export const webMapItem = {
 
 ## コントリビュート
 
-どなたでも[投稿](CONTRIBUTING_ja.md)を歓迎いたします。 プルリクエストは[米国 Esri 社のリポジトリ](https://github.com/Esri/maps-app-javascript)にて受け付けています。
+どなたでも[投稿](CONTRIBUTING.md)を歓迎いたします。 プルリクエストは[米国 Esri 社のリポジトリ](https://github.com/Esri/maps-app-javascript)にて受け付けています。
 
 1. 参加する
 2. 問題点の報告
