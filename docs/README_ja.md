@@ -2,7 +2,7 @@
 
 この ArcGIS API for JavaScript にて構築されたアプリを使用して、組織の権限のあるマップデータを作業者に共有してください。 構築するアプリケーションには、[ArcGIS Online の組織](https://doc.arcgis.com/en/arcgis-online/reference/what-is-agol.htm) で作成したカスタムの Web マップを含めることができます。 例として、Living Atlas の [Web マップ](http://doc.arcgis.com/en/living-atlas/item/?itemId=26888b0c21a44eb1ba2f26d1eb7981fe) をアプリの開始場所として使用できます。 Maps App には ArcGIS Online の強力なサービスまたは独自のサービスを使用した場所の検索やルート機能の例も含まれています。 また、組織で設定したベースマップを利用して、ユーザーが自分にとって意味のあるベースマップに切り替えることもできます。
 
-この例のアプリはオープンソースのため、コードを入手してあなたの組織に合わせてアプリを構成するか、似たような機能を自分のアプリに統合する方法を学びます。
+このサンプル アプリはオープンソースのため、コードを入手してあなたの組織に合わせてアプリを構成するか、同様な機能を自分のアプリに統合する方法を学びます。
 
 <!-- MDTOC maxdepth:6 firsth1:0 numbering:0 flatten:0 bullets:1 updateOnSave:1 -->
 
@@ -30,7 +30,7 @@
 
 ## Web マップの使用方法
 
-ArcGIS Online または ArcGIS Pro にて独自の Web マップを作成し、ArcGIS Online にて所属している組織のアプリで共有できます。これが ArcGIS に組み込まれた Web GIS モデルの中心的な機能です。 Web マップを使用するアプリを構築すると、コードではなく、地図作成やマップの構成を ArcGIS Online で完結できます。 これにより、コードの変更やアプリの更新を行うことなく、時間経過とともに地図を変更することが可能となります。 Web マップを使用して開発する利点について詳しくは、[こちら](https://developers.arcgis.com/web-map-specification/) をご参照ください。 また、 [ArcGIS Online](http://doc.arcgis.com/en/arcgis-online/create-maps/make-your-first-map.htm)  および [ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/mapping/map-authoring/author-a-basemap.htm) で Web マップを作成する方法についてもご参照ください。
+ArcGIS Online または ArcGIS Pro にて独自の Web マップを作成し、ArcGIS Online の組織を介してアプリで共有できます。これが ArcGIS に組み込まれた Web GIS モデルの中心的な機能です。 Web マップを使用するアプリを構築すると、コードではなく、地図作成やマップの構成を ArcGIS Online で完結できます。 これにより、コードの変更やアプリの更新を行うことなく、時間経過とともに地図を変更することが可能となります。 Web マップを使用して開発する利点について詳しくは、[こちら](https://developers.arcgis.com/web-map-specification/) をご参照ください。 また、 [ArcGIS Online](http://doc.arcgis.com/en/arcgis-online/create-maps/make-your-first-map.htm)  および [ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/mapping/map-authoring/author-a-basemap.htm) で Web マップを作成する方法についてもご参照ください。
 
 コード内の Web マップを読み込むことは簡単です。Maps App は、下記のコードを使用してポータルから Web マップを読み込みます（ユーザーがサインインする必要がある場合があります。）。
 
@@ -69,7 +69,7 @@ const basemapGallery = new BasemapGallery({
 
 ## Identity
 
-Maps App は ArcGIS [Identity](https://developers.arcgis.com/authentication/)  モデルを利用して、[指定されたユーザー](https://developers.arcgis.com/authentication/#named-user-login)のログインパターンを介して、リソースへのアクセスを提供します。
+Maps App は ArcGIS [Identity](https://developers.arcgis.com/authentication/)  モデルを利用して、[指定ユーザー](https://developers.arcgis.com/authentication/#named-user-login)のログインパターンを介して、リソースへのアクセスを提供します。
 
 [ルート検索](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html)ウィジェットにアクセスするには、提供された認証用ウィジェットにてサインインする必要があります。サインインすることで、カスタム WebMapBrowser ウィジェットと同様にルート検索ウィジェットも利用可能になります。
 

@@ -12,7 +12,7 @@ Maps App をそのまま使うことや、ArcGIS API for JavaScript を使用し
 - [使用方法](#使用方法)   
 - [デモ](#デモ)   
 - [問題](#問題)   
-- [貢献](#貢献)   
+- [コントリビュート](#コントリビュート)   
 - [MDTOC](#mdtoc)   
 - [ライセンス](#ライセンス)   
 
@@ -30,9 +30,9 @@ Maps App をそのまま使うことや、ArcGIS API for JavaScript を使用し
  * `manifest.json` - ホーム画面にボタンの追加
  * デフォルトアイコン
 
-このアプリケーションは、開発目的のために多くの技術を活用しています。ソースコードと付随するファイルをコンパイルし、まとめて提供すために [webpack](https://webpack.js.org/) を利用します。 ソースコードは [TypeScript](http://www.typescriptlang.org/) にて記述されており、 [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) を使用して[custom widgets](https://developers.arcgis.com/javascript/latest/guide/custom-widget/index.html)を作成する方法を紹介しています。
+このアプリケーションは、開発目的のために多くの技術を活用しています。ソースコードと付随するファイルをコンパイルし、まとめて提供すために [webpack](https://webpack.js.org/) を利用します。 ソースコードは [TypeScript](http://www.typescriptlang.org/) にて記述されており、 [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) を使用して[カスタム widgets](https://developers.arcgis.com/javascript/latest/guide/custom-widget/index.html)を作成する方法を紹介しています。
 
-このアプリケーションは、 [Workbox 用 Webpack](https://developers.google.com/web/tools/workbox/get-started/webpack) を使用して、アプリケーションの [service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) をセットアップし、ソースコードとファイルをキャッシュします。また、Internet Explorer、Edge、Safari の[ appcache fallback  ](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache)を使用します。
+このアプリケーションは、 [Workbox 用 Webpack](https://developers.google.com/web/tools/workbox/get-started/webpack) を使用して、アプリケーションの [service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) をセットアップし、ソースコードとファイルをキャッシュします。また、Internet Explorer、Edge、Safari の[アプリケーションキャッシュ フォールバック](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache)を使用します。
 
 [Intern](https://theintern.io/) は、全ての単体テストとコードカバレッジにて使用されます。
 
@@ -95,7 +95,7 @@ export const webMapItem = {
 * `http://127.0.0.1:8080`
 * `http://localhost:8080`
 
-アプリケーションをデプロイするときは、本番環境と同じアプリは開発に使用しないでください。 登録したアプリには、本番Webサイトのみをリダイレクトする必要があります。 
+アプリケーションをデプロイする際に、開発環境では本番環境と同じアプリケーション ID は使用しないでください。 登録したアプリケーション ID は、本番Webサイトにのみリダイレクトする必要があります。 
 
 ![](images/Register2.png)
 
@@ -105,11 +105,11 @@ export const webMapItem = {
 
 ## 問題
 
-バグの発見や、新機能の強化をリクエストしたい場合は、問題を提出してお知らせください。
+バグの発見や、新機能の強化をリクエストしたい場合は、issue を提出してお知らせください。
 
-## 貢献
+## コントリビュート
 
-どなたでも[投稿](CONTRIBUTING.md)を歓迎いたします。 プルリクエストを受け付けています。
+どなたでも[投稿](CONTRIBUTING_ja.md)を歓迎いたします。 プルリクエストは[米国 Esri 社のリポジトリ](https://github.com/Esri/maps-app-javascript)にて受け付けています。
 
 1. 参加する
 2. 問題点の報告
