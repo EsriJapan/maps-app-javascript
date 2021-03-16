@@ -26,6 +26,9 @@ import Directions from "esri/widgets/Directions";
 import Expand from "esri/widgets/Expand";
 import Home from "esri/widgets/Home";
 import Locate from "esri/widgets/Locate";
+// 印刷機能追加 Add Start
+import Print from "esri/widgets/Print";
+// 印刷機能追加 Add End
 import Search from "esri/widgets/Search";
 import Track from "esri/widgets/Track";
 
@@ -93,7 +96,11 @@ class Application extends declared(Accessor) {
     // sync the signed in status of the UserNav with the application
     watch(userNav, "signedIn", signedIn => (this.signedIn = signedIn));
 
-    this.view = new MapView({ map: this.webmap, container: viewNode });
+    //    this.view = new MapView({ map: this.webmap, container: viewNode });
+    this.view = new MapView({
+      map: this.webmap,
+      container: viewNode
+    });
     const view = this.view;
 
     userNav.view = view;
@@ -117,7 +124,10 @@ class Application extends declared(Accessor) {
 
     const search = new Search({ view });
 
-    const basemapGallery = new BasemapGallery({ view });
+    const basemapGallery = new BasemapGallery({
+      container: element(),
+      view
+    });
 
     const directionsExpand = new Expand({
       view,
@@ -132,7 +142,23 @@ class Application extends declared(Accessor) {
       group: "right"
     });
 
-    expandWidgets.addMany([directionsExpand, basemapExpand]);
+    // 印刷機能追加 Add Start
+    const print = new Print({
+      view,
+      // specify your own print service
+      printServiceUrl:
+        "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+    });
+
+    const printExpand = new Expand({
+      view,
+      content: print,
+      expandIconClass: "esri-icon-printer",
+      group: "right"
+    });
+    // 印刷機能追加 Add End
+
+    expandWidgets.addMany([directionsExpand, basemapExpand, printExpand]);
 
     const browser = new WebMapBrowser({ view });
     const compass = new Compass({ view });
@@ -201,6 +227,12 @@ class Application extends declared(Accessor) {
         component: basemapExpand,
         position: "top-right"
       },
+      // 印刷機能追加 Add Start
+      {
+        component: printExpand,
+        position: "top-right"
+      },
+      // 印刷機能追加 Add End
       {
         component: locate,
         position: "bottom-right"

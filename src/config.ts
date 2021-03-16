@@ -40,6 +40,6 @@ export const viewOptions = {
 export const webMapItem = {
   portalItem: {
     // shared WebMap
-    id: "3ff64504498c4e9581a7a754412b6a9e"
+    id: "aa36839c84af463dbc4ef11c1b0e7ce2"
   }
 };
